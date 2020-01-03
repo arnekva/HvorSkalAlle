@@ -3,15 +3,18 @@ getTimeEdit()
 });
 
 function getTimeEdit(){
-  let timeedit = "https://cloud.timeedit.net/hvl/web/studbergen/ri14X55Yg50041Q0g4QY5404Z565X572561Y540yZ06Q0675Y9X67701Z5cuZ505575Y2Q5X170YY1Zp770l5Q4xu06Q727l9Q5X047YL5W8l97Y1W03vwXEjWX47n66l51Xæq3ZnWQ1w52wa6a7178eWw7bn8tXpwc7WrWaa6K7QwmleXcbWcZrWj26en9rUWxclr7c7j8neEWmnæt71a7Wa83nWwwv1w2UXxnWr6tm7aWWXwX1rLb8bpc3j9X1XWw5Wrw6r705c1W92WcWX6nE5X6wav6WjnX6e6976eKWc9jj)nojtWa5XpXvvaxxcu6wW6v(xVwVXa5(nKcKvcowW75)X6Xj6dZ0wuaXwWr055WWY06k675QoZemQ9trtn16b61W1X5pdw47Q0ZD2043E63AF34CE619E2A055AA8B37EA7F.phtml"
-  let fagkoder = ["DAT152", "DAT158", "DAT159", "ING151"]
+  //link til åpen timeplan
+  // TimeEdit -> Åpen timeplan HVL
+  let timeedit = "https://cloud.timeedit.net/hvl/web/pen/ri15X60Yg50601Q0g8QY5790Z866X678561Y540yZ08Q8186Y5X878d17W9p87Qc57Z81cQ7aX5nY7Y7SWm7j2lQ18l58qyZr7pxv7a597a1cp0ty6VXvwnjj7n8xv)XdWW)WmWS(armVW(wwxEnXV8e66Wnrp2n6FeX1aW9uWZZZX5nrajbæa.html#colorlinks"
+    let fagkoder = ["DAT151", "DAT153", "DAT154", "ING151"]
   //Starting get for timeedit
   $.get( timeedit, function(response){
   $('#testDiv').html(response);
   let date = new Date()
   //TODO: Fix dato og tid
-  let dato = "10.09.2019"//formatDate(date)
-  let time = "10:15"//checkTime(date.getHours())
+  let dato = formatDate(date)
+  let time = checkTime(date.getHours())
+  //TODO: Legg til sjekk for previous time på en eller annen måte
 
   let dagensNoder = document.querySelectorAll('[title*=" ' + dato + '"]')
 
